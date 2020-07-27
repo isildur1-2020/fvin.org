@@ -1,0 +1,17 @@
+/* CONTENEDOR POSTER */
+.container_Poster {
+  /* GRID */
+  grid-area: poster;
+  /* GENERALES */
+  position: relative;
+}
+
+/* IMAGENES */
+.poster_imgs {
+  width: 100vw;
+  height: 100vh;
+
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}

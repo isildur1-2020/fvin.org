@@ -1,0 +1,53 @@
+/* ESTILOS DEL CONTENEDOR DEL HEADER */
+.container_Header {
+  /* GRID */
+  grid-area: header;
+  /* GENERALES */
+  padding: 0 50px;
+  background: white;
+  /* FLEX */
+  display: flex;
+  justify-content: space-between;
+  /* SOMBRAS HEADER */
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.6);
+}
+
+/* ESTILOS IMAGENES - HEADER */
+.img_container_Header {
+  display: flex;
+  align-items: center;
+}
+/* ESTILOS LOGOTIPO */
+.img_logo_Header {
+  width: 2.7rem;
+  cursor: pointer;
+}
+
+/* ESTILOS BARRA DE NAVEGACIÓN */
+.nav_Header {
+  display: flex;
+  align-items: flex-end;
+  /* ALTURA MINIMA - HEADER */
+  padding: 0;
+  min-height: 40px;
+}
+.ministry_Header {
+  font-weight: bold;
+}
+.nav_Header li {
+  margin: 0px 10px;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 0.83rem;
+
+  list-style: none;
+  letter-spacing: 1.5px;
+
+  cursor: pointer;
+}
+.nav_Header li:hover {
+  color: #4e5258;
+  transition: 0.4s;
+}
