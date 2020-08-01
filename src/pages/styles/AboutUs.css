@@ -1,0 +1,34 @@
+.container_AboutUs {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: repeat(5, 100px);
+    grid-gap: 20px;
+    grid-template-areas: " header       header  " 
+                         " square1      square1 "
+                         " mision       square2 "
+                         " vision       square3 "
+                         " footer       footer  ";
+}
+.kukis {
+    grid-area: mision;
+}
+.square_AboutUs {
+    background: black;
+}
+.square1 {
+    grid-area: square1;
+}
+.square2 {
+    grid-area: square2;
+}
+.square3 {
+    grid-area: square3;
+}
+.mision {
+    grid-area: mision;
+    background: gold;
+}
+.vision {
+    grid-area: vision;
+    background: gold;
+}

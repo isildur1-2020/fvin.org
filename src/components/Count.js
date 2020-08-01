@@ -2,8 +2,9 @@
 import React, { Component } from "react";
 import moment from "moment";
 import "moment-timezone";
-// Components
+// COMPONENTS
 import Clock from './Clock'
+import Live from './Live'
 
 export default class Count extends Component {
   constructor(props) {
@@ -12,7 +13,7 @@ export default class Count extends Component {
       moment: moment(),
       live: null,
       actualDate: moment(),
-      clockReverse: moment()
+      clockReverse: moment().hour(0).minute(0).second(0)
     };
     // HORAS ESTÁNDAR CULTOS FVIN
     //Sunday
@@ -21,24 +22,41 @@ export default class Count extends Component {
     //Wednesday
     this.wednesday = moment().day(3).hour(19).minute(0).second(0);
     this.wednesdayFinish = moment().day(3).hour(21).minute(0).second(0);
-    //PROOF ABOUT REVERSE CLOCK
-    this.domingo = moment().day(7).hour(6).minute(30).second(0);
-    this.miercoles = moment().day(10).hour(19).minute(0).second(0);
   }
   // Intervalo 
   componentDidMount() {
+    this.clockReverse()
     this.interval = setInterval(() => {
       this.calculateRender();
-      this.calculateClock();
     }, 1000);
   }
   componentWillUnmount() {
     clearInterval(this.interval);
   }
+  // Reverse Clock
+  async clockReverse() {
+    const first = this.state.moment.isAfter(this.sundayFinish)
+    const second = this.state.moment.isBefore(this.wednesday)
+
+    const third = this.state.moment.isAfter(this.wednesdayFinish)
+    const fourth = this.state.moment.isBefore(this.sunday)
+    console.log(first, second, third, fourth)
+    console.log(this.sunday, this.sundayFinish)
+    console.log(this.wednesday, this.wednesdayFinish)
+
+    if( first && second ) {
+      let duration = moment.duration(this.wednesday.diff(this.state.moment))
+      await this.setState({clockReverse: duration})
+    } else if( third && fourth ) {
+      let duration = moment.duration(this.sunday.diff(this.state.moment))
+      await this.setState({clockReverse: duration})
+    }
+  }
   // Render Clock
   calculateRender() {
     this.setState({
       actualDate: moment(),
+      clockReverse: this.state.clockReverse.subtract(1, 'second')
     });
     const first = this.state.actualDate.isBetween(
       this.sunday,
@@ -54,26 +72,16 @@ export default class Count extends Component {
     }
     this.setState({ live: false });
   }
-  // Reverse Clock
-  calculateClock() {
-    let uno =this.state.actualDate.dayOfYear()
-    let dos = this.domingo.dayOfYear()
-    let tres = this.miercoles.dayOfYear()
-
-   if(dos-uno < tres-uno){
-   }else if( tres-uno < dos-uno ) {
-   }
-  }
   render() {
     if (this.state.live) {
-      return null;
+      return <Live />;
     }
     return (
       <Clock
-        day={this.state.clockReverse.day()}
-        hour={this.state.clockReverse.hour()}
-        minute={this.state.clockReverse.minute()}
-        second={this.state.clockReverse.second()}
+        day={this.state.clockReverse.days()}
+        hour={this.state.clockReverse.hours()}
+        minute={ this.state.clockReverse.minutes()}
+        second={this.state.clockReverse.seconds()}
       />
     );
   }

@@ -21,7 +21,7 @@
 }
 /* ESTILOS LOGOTIPO */
 .img_logo_Header {
-  width: 2.7rem;
+  width: 3.1rem;
   cursor: pointer;
 }
 
@@ -31,7 +31,7 @@
   align-items: flex-end;
   /* ALTURA MINIMA - HEADER */
   padding: 0;
-  min-height: 40px;
+  min-height: 50px;
 }
 .ministry_Header {
   font-weight: bold;
@@ -40,12 +40,18 @@
   margin: 0px 10px;
 
   font-family: "Roboto", sans-serif;
-  font-size: 0.83rem;
 
   list-style: none;
   letter-spacing: 1.5px;
 
   cursor: pointer;
+}
+.nav_Header li a{
+  color: black;
+  text-decoration: none;
+}
+.nav_Header li a:active {
+  color: black;
 }
 .nav_Header li:hover {
   color: #4e5258;

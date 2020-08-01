@@ -1,14 +1,93 @@
+/* CONTAINER PRINCIPAL */
 .container_Footer {
     grid-area: footer;
 
-    padding: 20px;
-    min-height: 80px;
+    padding: 30px;
     background: #e6e6e6;
 
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    justify-content: space-evenly;
 }
-.container_Footer > img {
-    width: 40px;
+.container_Footer h4 {
+    margin: 15px 0;
 }
+
+/* SOCIAL NETWORK */
+.container_socialNetworks_Footer {
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container_socialNetworks_Footer ul {
+    padding: 0;
+}
+.container_socialNetworks_Footer ul li {
+    list-style: none;
+    font-size: 0.9rem;
+    margin: 3px;
+}
+.icons_socialNetworks_Footer {
+    display: flex;
+    justify-content: space-evenly;
+}
+/* BUTTON´S SOCIAL NETWORKS */
+.button_socialNetworks_Footer {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+/* STYLES LINKS FOOTER */
+.section_links_Footer {
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+}
+.section_links_Footer ul {
+    padding: 0;
+}
+.section_links_Footer ul li {
+    list-style: none;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.section_links_Footer ul li a {
+    text-decoration: none;
+    color: black
+}
+.section_links_Footer ul li a:active {
+    color: black;
+}
+
+/* SERVICES FVIN */
+.container_services_Footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-evenly; */
+}
+.services_days_Footer {
+    display: flex;
+}
+.section_hour_services_Footer {
+    margin: 0 15px;
+}
+.container_services_Footer ul li {
+    font-size: 0.9rem;
+    list-style: none;
+}
+.title_services_Footer {
+    text-align: center;
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+.ul_services_Footer {
+    padding: 0;
+}
+
+
+

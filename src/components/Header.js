@@ -1,5 +1,6 @@
 //REACT
 import React, { Component } from "react";
+import { Link } from 'react-router-dom'
 //STYLES
 import "./styles/Header.css";
 
@@ -36,7 +37,7 @@ export default class Header extends Component {
             </li>
             <li>Eventos</li>
             <li>Prédicas</li>
-            <li>Quienes Somos</li>
+            <li><Link to={'/home/about-us'}>Quienes Somos</Link></li>
             <li>Escuela de Música</li>
           </ul>
         </nav>
