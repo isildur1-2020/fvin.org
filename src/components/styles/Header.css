@@ -3,11 +3,12 @@
   /* GRID */
   grid-area: header;
   /* GENERALES */
-  padding: 0 50px;
   background: white;
-  /* FLEX */
-  display: flex;
-  justify-content: space-between;
+  /* GRID */
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: minmax(85px, auto);
+  grid-template-areas: "logotipo nav";
   /* SOMBRAS HEADER */
   -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.6);
   -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.6);
@@ -16,8 +17,11 @@
 
 /* ESTILOS IMAGENES - HEADER */
 .img_container_Header {
+  grid-area: logotipo;
+
   display: flex;
-  align-items: center;
+  justify-content: center;
+  align-self: center;
 }
 /* ESTILOS LOGOTIPO */
 .img_logo_Header {
@@ -27,22 +31,22 @@
 
 /* ESTILOS BARRA DE NAVEGACIÓN */
 .nav_Header {
+  grid-area: nav;
+  padding: 0 15%;
   display: flex;
+  justify-content: space-evenly;
   align-items: flex-end;
   /* ALTURA MINIMA - HEADER */
-  padding: 0;
   min-height: 50px;
 }
 .ministry_Header {
   font-weight: bold;
 }
 .nav_Header li {
-  margin: 0px 10px;
-
   font-family: "Roboto", sans-serif;
 
   list-style: none;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
 
   cursor: pointer;
 }
@@ -56,4 +60,30 @@
 .nav_Header li:hover {
   color: #4e5258;
   transition: 0.4s;
+}
+
+/* MEDIA QUERYS */
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+  
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+  html {
+    font-size: 10px;
+  }
+  .nav_Header {
+    padding: 0;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) { 
+
 }

@@ -32,12 +32,13 @@ export default class Header extends Component {
       return (
         <nav>
           <ul className="nav_Header">
+            <li><Link to={'/home'}>Inicio</Link></li>
+            <li><Link to={'/home/about-us'}>Quienes Somos</Link></li>
+            <li>Prédicas</li>
+            <li>Eventos</li>
             <li className="ministry_Header" onClick={() => this.setState({ isMinistry: true })}>
               Ministerios
             </li>
-            <li>Eventos</li>
-            <li>Prédicas</li>
-            <li><Link to={'/home/about-us'}>Quienes Somos</Link></li>
             <li>Escuela de Música</li>
           </ul>
         </nav>
@@ -46,10 +47,9 @@ export default class Header extends Component {
     return (
       <nav>
         <ul className="nav_Header">
-          <li className="ministry_Header" onClick={() => this.setState({ isMinistry: false })}>
-            Menú Principal
-          </li>
+          <li onClick={() => this.setState({ isMinistry: false })}><Link to={'/home'}>Inicio</Link></li>
           <li>Alabanza</li>
+          <li>Danzas</li>
           <li>Grupos Familiares</li>
           <li>Escuela Dominical</li>
         </ul>

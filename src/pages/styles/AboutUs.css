@@ -1,34 +1,40 @@
+/* CONTENEDOR PRINCIPAL ABOUT US */
 .container_AboutUs {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    grid-template-rows: repeat(5, 100px);
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(5, auto);
     grid-gap: 20px;
-    grid-template-areas: " header       header  " 
-                         " square1      square1 "
-                         " mision       square2 "
-                         " vision       square3 "
-                         " footer       footer  ";
+    grid-template-areas: " header               header           " 
+                         " section1_AboutUs     section1_AboutUs "
+                         " mision_AboutUs       article1_AboutUs "
+                         " vision_AboutUs       article2_AboutUs "
+                         " footer               footer  ";
 }
-.kukis {
-    grid-area: mision;
+
+.section_Principal_AboutUs {
+    grid-area: section1_AboutUs;
+    background: rgba(0, 0, 0, 0.7);
+    min-height: 400px;
+}
+
+.mision_AboutUs {
+    grid-area: mision_AboutUs;
+}
+.vision_AboutUs {
+    grid-area: vision_AboutUs;
 }
 .square_AboutUs {
-    background: black;
+    min-height: 300px;
+    background: rgba(0, 0, 0, 0.5);
 }
-.square1 {
-    grid-area: square1;
+
+.article_top_AboutUs {
+    grid-area: article1_AboutUs;
 }
-.square2 {
-    grid-area: square2;
+.article_bottom_AboutUs {
+    grid-area: article2_AboutUs;
 }
-.square3 {
-    grid-area: square3;
-}
-.mision {
-    grid-area: mision;
-    background: gold;
-}
-.vision {
-    grid-area: vision;
-    background: gold;
+.article_AboutUs {
+    min-height: 400px;
+    background: rgba(0, 0, 0, 0.6);
 }

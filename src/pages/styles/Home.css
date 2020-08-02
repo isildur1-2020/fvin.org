@@ -7,12 +7,12 @@ body
 }
 .container_Home{
     display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
-    grid-template-areas: " header       header      header      header "
-                         " poster       poster      poster      poster "
-                         " clock        clock       clock       clock  "
-                         " footer       footer      footer      footer ";
+    grid-template-areas: " header "
+                         " poster "
+                         " clock  "
+                         " footer ";
 }
 
