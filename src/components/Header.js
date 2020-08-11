@@ -1,8 +1,14 @@
-//REACT
+//REACT - ROUTER
 import React, { Component } from "react";
-import { Link } from 'react-router-dom'
-//STYLES
+import { Link } from "react-router-dom";
+//STYLES - HEADER
 import "./styles/Header.css";
+import "./mediaQuery/Header.css";
+// COMPONENTS
+import NavFirst from "./Header/NavFirst";
+import NavSecond from "./Header/NavSecond";
+// LOGOTIPO
+import logotipo from "../imgs/logo.jpg";
 
 export default class Header extends Component {
   constructor(props) {
@@ -18,42 +24,50 @@ export default class Header extends Component {
         <div className="img_container_Header">
           <img
             className="img_logo_Header"
-            src={this.props.logotipo}
-            alt="Logotipo"
+            src={logotipo}
+            alt="Logotipo - Iglesia Cristiana Fuente de Vida Internacional"
           />
         </div>
-        {/* CONTENEDOR MENU */}
-        {this.containerSelect()}
+
+        <menu className="menu_main_Header">
+          {/* CONTENEDOR MENU */}
+          {this.containerSelect()}
+        </menu>
+
+        <section className="login_Header">
+          <ul className="ul_nav_Header ul_login_Header">
+            <li>
+              <Link to={"/login"}>Iniciar Sesión</Link>
+            </li>
+            <li>
+              <Link to={"/register"}>Regístrate</Link>
+            </li>
+          </ul>
+        </section>
+
+        {/* NAV RESPONSIVE HEADER */}
+        <div className="hamburguer_nav_Header" onClick={() => {}} >
+          <div className="line_nav_responsive_Header"></div>
+          <div className="line_nav_responsive_Header"></div>
+          <div className="line_nav_responsive_Header"></div>
+        </div>
       </header>
     );
   }
   containerSelect() {
     if (!this.state.isMinistry) {
       return (
-        <nav>
-          <ul className="nav_Header">
-            <li><Link to={'/home'}>Inicio</Link></li>
-            <li><Link to={'/home/about-us'}>Quienes Somos</Link></li>
-            <li>Prédicas</li>
-            <li>Eventos</li>
-            <li className="ministry_Header" onClick={() => this.setState({ isMinistry: true })}>
-              Ministerios
-            </li>
-            <li>Escuela de Música</li>
-          </ul>
-        </nav>
+        <NavFirst 
+          justifyContent='space-evenly'
+          alignItems='flex-end'
+          handleClick={() => this.setState({ isMinistry: true })} />
       );
     }
     return (
-      <nav>
-        <ul className="nav_Header">
-          <li onClick={() => this.setState({ isMinistry: false })}><Link to={'/home'}>Inicio</Link></li>
-          <li>Alabanza</li>
-          <li>Danzas</li>
-          <li>Grupos Familiares</li>
-          <li>Escuela Dominical</li>
-        </ul>
-      </nav>
+      <NavSecond 
+        justifyContent='space-evenly'
+        alignItems='flex-end'
+        handleClick={() => this.setState({ isMinistry: false })} />
     );
   }
 }

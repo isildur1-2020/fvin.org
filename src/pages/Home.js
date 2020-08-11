@@ -1,24 +1,19 @@
 // React
 import React, { Component } from "react";
-// Styles
+// Styles - Home
 import "./styles/Home.css";
 // Components
-import Header from "../components/Header";
+import Layout from "../components/Layout";
 import Poster from "../components/Poster";
-import Footer from "../components/Footer";
 import Count from "../components/Count";
-// Logotipo
-import logotipo from "../imgs/logo.jpg";
 
-export default class App extends Component {
+export default class Home extends Component {
   render() {
     return (
-      <div className="container_Home">
-        <Header logotipo={logotipo} />
+      <Layout className="container_Home" >
         <Poster />
         <Count />
-        <Footer />
-      </div>
+      </Layout>
     );
   }
 }

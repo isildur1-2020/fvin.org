@@ -1,10 +1,10 @@
 /* CONTAINER PRINCIPAL */
 .container_Footer {
-    grid-area: footer;
-
+    margin-top: 20px;
     padding: 30px;
     background: #e6e6e6;
-    text-align: left;
+    text-align: center;
+    line-height: 22px;
     text-transform: uppercase;
 
     display: grid;
@@ -78,7 +78,6 @@
     font-size: 1rem;
 }
 .services_days_Footer {
-    padding-left: 35px;
     width: 100%;
     display: flex;
     flex-direction: column;

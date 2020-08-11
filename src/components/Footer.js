@@ -3,10 +3,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 // STYLES
 import "./styles/Footer.css";
+import "./mediaQuery/Footer.css"
 // ICONS - SOCIAL NETWORKS
-import fb from "../imgs/facebook.png";
-import mg from "../imgs/messenger.png";
-import maps from "../imgs/maps.png";
+import fb from "../imgs/footer/facebook.png";
+import mg from "../imgs/footer/messenger.png";
+import maps from "../imgs/footer/maps.png";
 
 const Footer = () => {
   return (
@@ -57,7 +58,7 @@ const Footer = () => {
         <ul className="ul_Footer">
           <li>Cr 93 D # 49 C 80 sur</li>
           <li>iglesiafvin@fvin.com</li>
-          <li>310 857 58 99</li>
+          <li>310-857-58-99</li>
         </ul>
         <div className="icons_socialNetworks_Footer">
           <button

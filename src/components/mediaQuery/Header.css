@@ -1,0 +1,59 @@
+/* MEDIA QUERYS */
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+  
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media screen and (max-width: 768px) {
+    /* GENERALES POR CAMBIAR */
+    html {
+        font-size: 13px;
+    }
+    /* EXIT THE MENU */
+    .menu_main_Header {
+        display: none;
+    }
+    /* CONTAINER HEADER */
+    .container_Header {
+        margin-bottom: 0;
+        grid-template-rows: minmax(10vh, auto);
+        grid-template-areas: "logo_Header login_Header hamburguer_Header";
+    }
+    /* IMAGE HEADER */
+    .img_logo_Header {
+        width: 48px;
+    }
+    /* LOGIN HEADER */
+    .ul_login_Header {
+        width: 65%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* HAMBURGUER NAV HEADER */
+    .hamburguer_nav_Header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        grid-area: hamburguer_Header;
+    }
+    .line_nav_responsive_Header {
+        width: 30px;
+        height: 3px;
+        background: black;
+        margin: 3px;
+    }
+    
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) { 
+}

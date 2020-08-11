@@ -1,0 +1,27 @@
+/* GENERALES ul-li-a */
+.ul_nav_Header {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  list-style: none;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+.ul_nav_Header li a {
+  color: black;
+  text-decoration: none;
+}
+.nav_Header li:hover {
+  color: #4e5258;
+  transition: 0.4s;
+}
+.nav_Header li a:active {
+  color: black;
+}
+
+/* ESTILOS BARRA DE NAVEGACIÓN */
+.nav_Header {
+  grid-area: nav_Header;
+  /* ALTURA MINIMA - HEADER */
+  min-height: 9vh;
+  letter-spacing: 2px;
+}
