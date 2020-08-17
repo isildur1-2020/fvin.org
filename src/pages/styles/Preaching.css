@@ -1,5 +1,12 @@
 .container_Preaching {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 300px);
     grid-template-rows: auto;
+
+    justify-content: center;
+}
+.square {
+    background: rgba(0, 0, 0, 0.2);
+    height: 300px;
 }

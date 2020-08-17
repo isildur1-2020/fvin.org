@@ -40,7 +40,7 @@ export default class Header extends Component {
               <Link to={"/login"}>Iniciar Sesión</Link>
             </li>
             <li>
-              <Link to={"/register"}>Regístrate</Link>
+              <Link to={"/sign-up"}>Regístrate</Link>
             </li>
           </ul>
         </section>

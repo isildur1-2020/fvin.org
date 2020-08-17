@@ -21,7 +21,7 @@ const NavFirst = props => {
           <Link to={"/preaching"}>Prédicas</Link>
         </li>
         <li>
-          <Link to={"/about-us"}>Eventos</Link>
+          <Link to={"/events"}>Eventos</Link>
         </li>
         <li
           style={{ fontWeight: "bold" }}

@@ -2,8 +2,6 @@
 import React from "react";
 // Styles CSS
 import "./styles/AboutUs.css";
-// Components
-import Layout from "../components/Layout";
 // Images
 import imageOne from "../imgs/about-us/one_AboutUs.jpg";
 import imageTwo from "../imgs/about-us/two_AboutUs.jpg";
@@ -11,7 +9,7 @@ import imageThree from "../imgs/about-us/three_AboutUs.jpg";
 
 const AboutUs = () => {
   return (
-    <Layout className="container_AboutUs">
+    <div className="container_AboutUs">
       {/* TEXTO PRINCIPAL */}
       <section className="preface_AboutUs">
         <h1 style={{ textAlign: 'center' }}>¿ Quieres conocer a Jesús ?</h1>
@@ -30,7 +28,7 @@ const AboutUs = () => {
             por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem
             Ipsum.
           </p>
-          <img className="img_AboutUs" src={imageOne} />
+          <img className="img_AboutUs" src={imageOne} alt="Gente adorando a Jesús" />
         </div>
       </section>
 
@@ -85,7 +83,8 @@ const AboutUs = () => {
             poderosa con los que están enfermos.
             <br />
             <em>
-              Mateo 28:18-20. Marcos 16:15-18. Lucas 24:47-49. Juan 20:21.<br />
+              Mateo 28:18-20. Marcos 16:15-18.<br />
+              Lucas 24:47-49. Juan 20:21.<br />
               Hechos 1:8. 2 Timoteo 2:3-6. 2 Pedro 3:9.
             </em>
           </p>
@@ -101,7 +100,9 @@ const AboutUs = () => {
             de pertenecer a la familia de Dios en amor.
             <br />
             <em>
-              Mateo 24:31. 1 Tesalonisences 4:13-18. Juan 1:12. Romanos 8:15-17.
+              Mateo 24:31.<br />
+              1 Tesalonisences 4:13-18.<br />
+              Juan 1:12. Romanos 8:15-17.<br />
               Gálatas 3:26. Efesios 1:5; 2:19.
             </em>
           </p>
@@ -136,7 +137,7 @@ const AboutUs = () => {
           jóvenes, mujeres, hombres, parejas y niños.
           <br />
           <br />
-          <img className="img_AboutUs" src={imageTwo} />
+          <img className="img_AboutUs" src={imageTwo} alt="Millones de personas" />
           <br />
           <br />
           Además, una emisora y un canal de televisión, promoviendo congresos a
@@ -165,9 +166,9 @@ const AboutUs = () => {
             <br />
           </li>
         </ol>
-        <img className="img_AboutUs" src={imageThree} />
+        <img className="img_AboutUs" src={imageThree} alt="Obras de caridad" />
       </article>
-    </Layout>
+    </div>
   );
 };
 export default AboutUs;

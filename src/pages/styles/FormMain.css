@@ -1,0 +1,59 @@
+/* CONTENEDOR - FORMULARIO */
+.container_Form_main {
+    width: 100%;
+    padding: 100px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* FORMULARIO - H1*/
+.container_Form_main h1 {
+    font-size: 1.8rem;
+}
+/* FORMULARIO */
+.form_main {
+    width: 35%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center; 
+}
+/* FORMULARIO - INPUT*/
+.form_main input {
+    width: 100%;
+    margin: 20px 0;
+    padding: 5px;
+
+    font-size: 1rem;
+    border-bottom: 1px solid black;
+}
+.form_main input:hover::placeholder {
+    transition: 1s;
+    color: white;
+}
+.form_main input:focus::placeholder {
+    transition: 0.5s;
+    font-size: 1.05rem;
+}
+/* FORMULARIO - BUTTON*/
+.form_main button {
+    font-size: 1.1rem;
+    margin: 20px 0;
+    width: 50%;
+    height: 50px;
+    border-radius: 25px;
+    background: #ADFF2F;
+}
+.form_main button:hover {
+    transition: 0.5s;
+    color: white;
+    background: #7CFC00;
+}
+.form_main button:focus {
+    transition: 0.5s;
+    color: white;
+    background: #7CFC00;
+}

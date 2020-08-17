@@ -1,9 +1,11 @@
-.container {
+.container_Live {
     grid-area: clock;
-    min-height: 150px;
+    min-height: 200px;
 
     display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+}
+.container_Live h1 {
+    font-size: 2.3rem;
 }
